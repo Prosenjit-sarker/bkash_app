@@ -112,7 +112,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: const TextStyle(fontSize: 17, color: AppColors.textDark, letterSpacing: 4),
                       decoration: InputDecoration(
                         labelText: AppStrings.bkashPin,
-                        labelStyle: const TextStyle(fontSize: 13, color: AppColors.textGrey, fontWeight: FontWeight.w600),
+                        labelStyle: const TextStyle(
+                          fontSize: 13,
+                          color: AppColors.textGrey,
+                          fontWeight: FontWeight.w600,
+                        ),
                         hintText: AppStrings.enterPin,
                         hintStyle: const TextStyle(fontSize: 14, color: AppColors.textGrey, letterSpacing: 0),
                         border: const UnderlineInputBorder(),
@@ -127,7 +131,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(height: 20),
                 GestureDetector(
                   onTap: () {
-                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('PIN reset feature coming soon')));
+                    ScaffoldMessenger.of(
+                      context,
+                    ).showSnackBar(const SnackBar(content: Text('PIN reset feature coming soon')));
                   },
                   child: const Text(AppStrings.forgotPin, style: TextStyle(color: AppColors.primary, fontSize: 12)),
                 ),
