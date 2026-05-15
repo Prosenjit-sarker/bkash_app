@@ -1,7 +1,8 @@
 import 'package:bkash_app/presentation/provider/home_provider.dart';
-import 'package:bkash_app/presentation/screens/home/widget/menu_grid_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import 'menu_grid_item.dart';
 
 class MenuGrid extends StatelessWidget {
   const MenuGrid({super.key});
@@ -18,7 +19,7 @@ class MenuGrid extends StatelessWidget {
             GridView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
-              padding: .symmetric(horizontal: 12, vertical: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 4,
                 childAspectRatio: 0.78,

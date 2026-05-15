@@ -14,13 +14,13 @@ class AppStrings {
   static const String accountNumberValue = '+88 0123456789';
   static const String bkashPin = 'bkash PIN';
   static const String enterPin = 'Enter bkash PIN';
-  static const String forgotPin = 'Fotgot PIN? Try PIN Reset';
+  static const String forgotPin = 'Forgot PIN? Try PIN Reset';
   static const String next = 'Next';
   static const String bangla = 'বাংলা';
 
   // Home AppBar
   static const String tapForBalance = 'Tap for Balance';
-  static const String userName = 'jannat Al Naeem';
+  static const String userName = 'Prosenjit Sarker';
 
   // Menu items
   static const String sendMoney = 'Send Money';

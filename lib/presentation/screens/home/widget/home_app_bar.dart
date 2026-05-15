@@ -12,24 +12,23 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CircleAvatar(
-          child: Icon(Icons.person, color: Colors.white),
+        const CircleAvatar(
           radius: 22,
+          backgroundColor: AppColors.white,
+          child: Icon(Icons.person, color: AppColors.primary),
         ),
-        SizedBox(width: 10),
-
-        Column(
-          children: [
-            Text(
-              AppStrings.userName,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-                fontWeight: .w600,
+        const SizedBox(width: 10),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                AppStrings.userName,
+                style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600),
               ),
-            ),
-            _BalanceCheck(),
-          ],
+              const _BalanceCheck(),
+            ],
+          ),
         ),
       ],
     );
@@ -37,38 +36,28 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
 }
 
 class _BalanceCheck extends StatelessWidget {
-  const _BalanceCheck({super.key});
+  const _BalanceCheck();
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: .all(4),
-      decoration: BoxDecoration(
-        color: AppColors.white,
-        borderRadius: BorderRadius.all(Radius.elliptical(5, 5)),
-      ),
+      padding: const EdgeInsets.all(4),
+      decoration: BoxDecoration(color: AppColors.white, borderRadius: const BorderRadius.all(Radius.elliptical(5, 5))),
       child: Row(
         children: [
           Container(
             height: 16,
             width: 16,
-            decoration: BoxDecoration(
-              color: AppColors.primary,
-              shape: BoxShape.circle,
-            ),
-            child: Center(
+            decoration: const BoxDecoration(color: AppColors.primary, shape: BoxShape.circle),
+            child: const Center(
               child: Text(
                 '৳',
-                style: TextStyle(
-                  fontSize: 11,
-                  fontWeight: .bold,
-                  color: Colors.white,
-                ),
+                style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.white),
               ),
             ),
           ),
-          SizedBox(width: 4),
-          Text(AppStrings.tapForBalance, style: TextStyle(fontSize: 13)),
+          const SizedBox(width: 4),
+          const Text(AppStrings.tapForBalance, style: TextStyle(fontSize: 13)),
         ],
       ),
     );
